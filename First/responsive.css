@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .container {
+        margin-top: 0;
+    }
+    
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .button-container {
+        margin-bottom: 5rem;
+    }
+}
