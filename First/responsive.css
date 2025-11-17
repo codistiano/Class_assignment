@@ -84,7 +84,6 @@ body {
     letter-spacing: 0.01em;
     color: #101828;
     margin-bottom: 0.75rem;
-    text-transform: none;
 }
 
 .text-content p {
@@ -98,31 +97,47 @@ body {
     padding: 0 0.25rem;
 }
 
-.content {
-    position: relative;
-}
-
-.content::after {
-    content: "Team Members\A• Perez Endale (Leader)\A• Mubarek Mustafa (Secretary)\A• Abduselam Nurhussen\A• Nehemiah Zebene\A• Abedela Bedru";
-    display: block;
-    margin-top: 3rem;
-    padding: 1.75rem 2rem;
-    border: 1px solid #d0d5dd;
-    border-radius: 12px;
+.team-footer {
+    font-family: "Helvetica", Arial, sans-serif;
+    padding: 3rem 2.5rem 3.5rem;
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    font-size: 0.98rem;
-    line-height: 1.75;
     color: #1f2937;
-    white-space: pre-line;
-    text-align: left;
 }
 
-.content::after:first-line {
+.team-footer__inner {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 2.25rem 3rem;
+    border-radius: 14px;
+    border: 1px solid #d0d5dd;
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.team-footer__title {
+    font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #0f172a;
+}
+
+.team-footer__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #1f2937;
+}
+
+.team-footer__list li strong {
+    font-weight: 600;
 }
 
 @media (max-width: 600px) {
@@ -159,13 +174,17 @@ body {
         max-width: none;
     }
 
-    .content::after {
-        text-align: center;
-        margin-top: 2.5rem;
-        padding: 1.5rem;
+    .team-footer {
+        padding: 2.5rem 1.5rem 3rem;
     }
 
-    .content::after:first-line {
-        letter-spacing: 0.08em;
+    .team-footer__inner {
+        padding: 2rem 1.75rem;
+        text-align: center;
+    }
+
+    .team-footer__list {
+        padding-left: 0;
+        list-style-position: inside;
     }
 }
