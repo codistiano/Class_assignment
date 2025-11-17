@@ -1,13 +1,130 @@
-@media (min-width: 768px) {
+body {
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #1f2933;
+    background-color: #ffffff;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2.5rem;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #101828;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #475467;
+    max-width: 36rem;
+    text-transform: none;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.custom-button {
+    width: 100%;
+    max-width: 220px;
+    background-color: #00a675;
+    color: #ffffff;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 166, 117, 0.25);
+    transition: background-color 0.25s ease;
+}
+
+.custom-button:hover {
+    background-color: #009067;
+}
+
+.text-content {
+    max-width: 540px;
+}
+
+.text-content h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #101828;
+    margin-bottom: 0.75rem;
+    text-transform: none;
+}
+
+.text-content p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #344054;
+}
+
+.highlight {
+    background-color: #bbf7d0;
+    padding: 0 0.25rem;
+}
+
+@media (max-width: 600px) {
     .container {
-        margin-top: 0;
+        padding: 3rem 1.5rem;
     }
-    
+
+    .content {
+        gap: 1.5rem;
+    }
+
+    .subtitle {
+        max-width: none;
+        font-size: 1.125rem;
+    }
+
     .grid-layout {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    
+
     .button-container {
-        margin-bottom: 5rem;
+        justify-content: center;
+    }
+
+    .custom-button {
+        max-width: none;
+        width: 100%;
+    }
+
+    .text-content {
+        max-width: none;
     }
 }
