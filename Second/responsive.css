@@ -1,0 +1,198 @@
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 0 1.5em;
+    }
+    
+    header {
+        padding: 4em 0 3em 0;
+    }
+    
+    header .avatar img {
+        width: 8em;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+    
+    .thumbnails {
+        flex-direction: column;
+        margin: 0 0 2em 0;
+    }
+    
+    .thumbnails > div {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 1em;
+    }
+    
+    .thumbnails a {
+        margin: 0 0 1.5em 0;
+    }
+    
+    ul.icons li {
+        padding: 0 0.75em 0 0;
+    }
+    
+    footer {
+        padding: 3em 0 3em 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding: 0 1em;
+    }
+    
+    header {
+        padding: 3em 0 2em 0;
+    }
+    
+    header .avatar img {
+        width: 6em;
+    }
+    
+    header h1 {
+        font-size: 1.25em;
+        line-height: 1.3;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 0.9em;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+    
+    .thumbnails {
+        margin: 0 0 1.5em 0;
+    }
+    
+    .thumbnails a {
+        margin: 0 0 1em 0;
+    }
+    
+    .thumbnails a h3 {
+        margin: 0.75em;
+        font-size: 0.85em;
+    }
+    
+    ul.icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    ul.icons li {
+        padding: 0 0.5em;
+        margin: 0.25em 0;
+    }
+    
+    .icon.style2:before {
+        font-size: 1.1em;
+    }
+    
+    footer {
+        padding: 2em 0 2em 0;
+    }
+    
+    footer p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .thumbnails {
+        flex-wrap: wrap;
+        margin: 0 0 2em -1.5em;
+    }
+    
+    .thumbnails > div {
+        width: 50%;
+        padding-left: 1.5em;
+    }
+    
+    .thumbnails > div:last-child {
+        width: 100%;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .wrapper {
+        max-width: 60em;
+        padding: 0 1.5em;
+    }
+    
+    .thumbnails {
+        margin: 0 0 2em -1.5em;
+    }
+    
+    .thumbnails > div {
+        padding-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .wrapper {
+        padding: 0 0.75em;
+    }
+    
+    header {
+        padding: 2em 0 1.5em 0;
+    }
+    
+    header .avatar img {
+        width: 5em;
+    }
+    
+    header h1 {
+        font-size: 1.1em;
+    }
+    
+    ul.icons li {
+        padding: 0 0.25em;
+    }
+    
+    .icon.style2 {
+        padding: 0.4em;
+    }
+}
+
+@media screen and (min-resolution: 120dpi) and (max-width: 768px) {
+    .thumbnails a img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 2em 0 1.5em 0;
+    }
+    
+    header .avatar img {
+        width: 4em;
+    }
+    
+    header h1 {
+        font-size: 1.1em;
+    }
+    
+    .thumbnails {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .thumbnails > div {
+        width: 50%;
+    }
+}
