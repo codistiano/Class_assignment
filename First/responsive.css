@@ -42,14 +42,16 @@ body {
 .grid-layout {
     display: grid;
     grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: start;
+    gap: 4rem;
+    align-items: stretch;
 }
 
 .button-container {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-start;
-    justify-content: flex-start;
+    height: 100%;
 }
 
 .custom-button {
@@ -96,6 +98,33 @@ body {
     padding: 0 0.25rem;
 }
 
+.content {
+    position: relative;
+}
+
+.content::after {
+    content: "Team Members\A• Perez Endale (Leader)\A• Mubarek Mustafa (Secretary)\A• Abduselam Nurhussen\A• Nehemiah Zebene\A• Abedela Bedru";
+    display: block;
+    margin-top: 3rem;
+    padding: 1.75rem 2rem;
+    border: 1px solid #d0d5dd;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #1f2937;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.content::after:first-line {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0f172a;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 3rem 1.5rem;
@@ -117,6 +146,8 @@ body {
 
     .button-container {
         justify-content: center;
+        align-items: center;
+        height: auto;
     }
 
     .custom-button {
@@ -126,5 +157,15 @@ body {
 
     .text-content {
         max-width: none;
+    }
+
+    .content::after {
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .content::after:first-line {
+        letter-spacing: 0.08em;
     }
 }
