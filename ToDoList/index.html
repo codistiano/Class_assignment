@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="./ style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="icon">✓</span> Simple To-Do List</h1>
+            <p class="subtitle">Get things done, one task at a time</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat">
+                <span id="total-tasks">0</span>
+                <span>Total</span>
+            </div>
+            <div class="stat">
+                <span id="active-tasks">0</span>
+                <span>Active</span>
+            </div>
+            <div class="stat">
+                <span id="completed-tasks">0</span>
+                <span>Done</span>
+            </div>
+        </div>
+
+        <div class="main">
+            
+            <div class="task-list-section">
+                <div class="controls">
+                    <input type="text" id="search-input" placeholder="Search tasks...">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+
+                <div class="task-container">
+                    <ul id="task-list">
+                        
+                    </ul>
+                    <div id="empty-message" class="empty-message">
+                        No tasks yet. Add one above!
+                    </div>
+                </div>
+
+                <div class="bulk-actions">
+                    <label>
+                        <input type="checkbox" id="select-all">
+                        Select All
+                    </label>
+                    <button id="delete-selected">Delete Selected</button>
+                </div>
+            </div>
+
+            
+            <div class="add-task-section">
+                <h2>Add New Task</h2>
+                <form id="add-task-form">
+                    <div class="form-group">
+                        <label for="task-text">Task Description</label>
+                        <textarea id="task-text" placeholder="What do you need to do?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">
+                        <span>+</span> Add Task
+                    </button>
+                </form>
+
+                <div class="api-section">
+                    <p>Need some ideas?</p>
+                    <button id="load-sample">Load Sample Tasks</button>
+                </div>
+
+                <div class="info">
+                    <p>✓ Tasks are saved automatically</p>
+                    <p>✓ Click on a task to mark it complete</p>
+                    <p>✓ Use the buttons to filter your list</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Simple To-Do List &copy; 2023</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
